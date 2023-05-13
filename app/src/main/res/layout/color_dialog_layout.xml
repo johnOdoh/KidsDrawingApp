@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <LinearLayout
+            android:id="@+id/ll_color_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/black"
+                android:tag="@color/black"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/gray"
+                android:tag="@color/gray"/>
+<!--                android:onClick="selectColor"-->
+<!--                tools:ignore="UsingOnClickInXml" -->
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/purple_200"
+                android:tag="@color/purple_200"
+ />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/purple_500"
+                android:tag="@color/purple_500"
+/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/purple_700"
+                android:tag="@color/purple_700"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/red"
+                android:tag="@color/red"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_color_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/pink"
+                android:tag="@color/pink"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:id="@+id/gray"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/blue"
+                android:tag="@color/blue"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/yellow"
+                android:tag="@color/yellow"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/orange"
+                android:tag="@color/orange"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/gold"
+                android:tag="@color/gold"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/green"
+                android:tag="@color/green"
+                android:onClick="selectColor"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_drawing_canvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/dv_bg"
+        app:layout_constraintBottom_toTopOf="@id/cl_text_box_tools"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.kidsdrawingapp.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_text_box_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#813B35"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/ll_tools"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_drawing_canvas">
+
+        <LinearLayout
+            android:id="@+id/ll_text_box_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ib_toggle_border"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ib_bg"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/dot_square" />
+
+            <ImageButton
+                android:id="@+id/ib_text_box_color_selector"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/pens"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_text_box_bg_color"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/palette"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_remove_text_box"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ib_bg"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/trash" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_close_text_box_tools"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/remove"
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#313967"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_text_box_tools"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tools_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ib_brushsize_selector"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/brush"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_color_picker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/paint_color"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_eraser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/eraser"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_text_box"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/abc"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_save_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/save"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_gallery"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/gallery"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_tools_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ib_undo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/undo"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_view_images"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/folder"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/ib_redo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/ib_bg"
+                android:src="@drawable/redo"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
